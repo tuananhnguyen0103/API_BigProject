@@ -24,5 +24,13 @@ namespace BLL
         {
             return _res.CreateProduct(products);
         }
+        public Products GetAProductById(int idProduct)
+        {
+            return _res.GetAProductById(idProduct);
+        }
+        public bool UpdateProduct(Products products, int idProduct)
+        {
+            return _res.UpdateProduct(products, idProduct);
+        }
     }
 }

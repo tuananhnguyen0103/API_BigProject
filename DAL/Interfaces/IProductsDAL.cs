@@ -9,6 +9,9 @@ namespace DAL.Interfaces
     {
         List<Products> GetProducts();
         bool CreateProduct(Products products);
+
+        Products GetAProductById(int IdProduct);
+        bool UpdateProduct(Products products, int idProduct);
     }
    
 }

@@ -10,6 +10,10 @@ namespace BLL.Interfaces
         List<Products> GetProducts();
 
         bool CreateProducts(Products products);
+
+        Products GetAProductById(int idProduct);
+
+        bool UpdateProduct(Products products, int idProduct);
     }
     
 }
