@@ -78,6 +78,7 @@ namespace DAL
                 "@ProductId", idProduct,
                 "@ProductName", products.Name,
                 "@ProductDes", products.Description,
+                "@ProductImage", products.Image,
                 "@ProdcutPrice", products.Price,
                 "@ProductQuati", products.Quantity,
                 "@IdCategories", products.IdCategories);

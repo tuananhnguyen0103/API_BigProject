@@ -9,7 +9,7 @@ $.ajax({
             htmlTag+='<div class="col-12 col-lg-6 col-xl-4">\
 				  <div class="box">\
 					<div class="fx-card-item">\
-						<div class="fx-card-avatar fx-overlay-1"> <img src="'+element.image+'" alt="user" class="bbsr-0 bber-0">\
+						<div class="fx-card-avatar fx-overlay-1" style ="width: 26rem;height: 35rem;"> <img style = "max-height: 80%;max-width: 80%; margin: 2rem;" src="'+element.image+'" alt="user" class="bbsr-0 bber-0">\
 							<div class="fx-overlay scrl-up">\
 								<ul class="fx-info">\
 									<li><a class="btn btn-outline image-popup-vertical-fit" href="../images/product/product-1.png"><i class="mdi mdi-magnify"></i></a></li>\

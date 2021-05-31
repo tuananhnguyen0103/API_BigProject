@@ -49,7 +49,7 @@ namespace AlcoholAPI_BTL.Controllers
         }
         [Route("update-item/{idProduct}")]
         [HttpPost]
-        public Products UpdateProducts([FromBody] Products products, int idProduct)
+        public Products UpdateProducts([FromForm] Products products, int idProduct)
         {
             _IProductBUS.UpdateProduct(products, idProduct);
             return products;
