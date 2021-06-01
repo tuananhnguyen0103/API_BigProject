@@ -36,7 +36,7 @@ namespace AlcoholAPI_BTL.Controllers
         }
         [Route("create-item")]
         [HttpPost]
-        public Bill CreateBill([FromBody] Bill bill)
+        public Bill CreateBill([FromForm] Bill bill)
         {
             DateTime dateTime = DateTime.Now;
             DateTime dateTime_Eastern = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time"));

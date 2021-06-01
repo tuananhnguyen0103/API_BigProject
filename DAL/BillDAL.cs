@@ -34,12 +34,23 @@ namespace DAL
         public bool CreateBill(Bill bill, string DateBuy)
         {
             string msgError = "";
+            var id = 0;
+            try
+            {
+                var result = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "GetLastCustomer");
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                id= result.ConvertTo<Customers>().FirstOrDefault().Id;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
             try
             {
                 var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "AddToBill",
-                "@IdCus", bill.IdCustomer,
+                "@IdCus", id,
                 "@Total", bill.BillTotal,
-                "@Desc", bill.BillDescription,
                 "@DateBuy",DateBuy);
 
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))

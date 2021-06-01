@@ -35,7 +35,7 @@ namespace AlcoholAPI_BTL.Controllers
         }
         [Route("create-item")]
         [HttpPost]
-        public Customers CreateCustomer([FromBody] Customers customers)
+        public Customers CreateCustomer([FromForm] Customers customers)
         {
             _ICustomerBUS.CreateCustomer(customers);
             return customers;

@@ -29,6 +29,7 @@ $.ajax({
         $('#product_description').val(results.description);
         $('#product_image').attr("src",results.image);
         $('#product_quantity').val(results.quantity);
+        document.getElementById("get-list-categories").value = results.idCategories;
         var a = (results.price)
         // $('#product_price').inputNumberFormat({ 'decimal': 0 });
     },
