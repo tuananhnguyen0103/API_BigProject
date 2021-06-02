@@ -1,3 +1,1 @@
-
-
-Cart.initJQuery();
+// Cart.initJQuery();

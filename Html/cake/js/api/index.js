@@ -21,7 +21,7 @@ $.ajax({
                         <div class="inner-box">\
                             <div class="image-box">\
                                 <div class="sale-tag">sale!</div>\
-                                <figure class="image"><a href="shop-single.html"><img src="'+element.image+'" alt=""></a></figure>\
+                                <figure class="image"><a href="/Html/cake/shop-single.html?id='+element.id+'"><img src="'+element.image+'" alt=""></a></figure>\
                                 <div class="btn-box add-cart"  data-id="'+element.id+'" \
                                 data-name="'+element.name+'"\
                                 data-price="'+element.price+'"\
@@ -39,7 +39,7 @@ $.ajax({
                         else{
 
                         }
-                        
+                        // window.addEventListener('storage', document.location.reload())
                     });
                 },
                 error: function(results){

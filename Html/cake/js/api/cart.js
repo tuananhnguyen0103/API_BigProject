@@ -16,7 +16,7 @@ Cart.trigger = function(eventName, args) {
 };
 
 Cart.save = function() {
-  localStorage.setItem('cart-items', JSON.stringify(Cart.items));
+  localStorage.setItem('cart_items', JSON.stringify(Cart.items));
   Cart.trigger('saved');
 
   return Cart;
@@ -93,7 +93,7 @@ Cart.subTotal = function() {
 };
 
 Cart.init = function() {
-  var items = localStorage.getItem('cart-items');
+  var items = localStorage.getItem('cart_items');
   if (items) {
     Cart.items = JSON.parse(items);
   } else {

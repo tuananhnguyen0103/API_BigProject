@@ -279,14 +279,14 @@
                         <!-- Product Detail -->
                         <div class="product-details">
                             <!--Basic Details-->
-                            <div class="basic-details">
+                            <div class="basic-details" id="div-have-info-product-details">
                                 <div class="row clearfix">
                                     <div class="image-column col-md-6 col-sm-12">
-                                        <figure class="image"><a href="images/resource/products/product-sinlge.jpg" class="lightbox-image" title="Image Caption Here"><img src="images/resource/products/product-sinlge.jpg" alt=""><span class="icon fa fa-search"></span></a></figure>
+                                        <figure class="image"><a href="images/resource/products/product-sinlge.jpg" class="lightbox-image" title="Image Caption Here"><img id="product_image" src="images/resource/products/product-sinlge.jpg" alt=""><span class="icon fa fa-search"></span></a></figure>
                                     </div>
                                     <div class="info-column col-md-6 col-sm-12">
                                         <div class="details-header">
-                                            <h4>Birthday Cake</h4>
+                                            <h4 id ="product_name">Birthday Cake</h4>
                                             <div class="rating">
                                                 <span class="fa fa-star"></span>
                                                 <span class="fa fa-star"></span>
@@ -295,16 +295,15 @@
                                                 <span class="fa fa-star"></span>
                                             </div>
                                             <a class="reviews" href="#">(2 Customer Reviews)</a>
-                                            <div class="item-price">$84.00</div>
-                                            <div class="text">Accumsan lectus, consectetuer et sagittis et commodo, massa et, sed facilisi mi, sit diam. Ultrices facilisi convallis nullam duis. Aliquam lacinia orci convallis erat ac, vitae neque in class.</div>
+                                            <div class="item-price" id="product_price">$84.00</div>
+                                            <div class="text" id="product_description">Accumsan lectus, consectetuer et sagittis et commodo, massa et, sed facilisi mi, sit diam. Ultrices facilisi convallis nullam duis. Aliquam lacinia orci convallis erat ac, vitae neque in class.</div>
                                         </div>
 
                                         <div class="other-options clearfix">
-                                            <div class="item-quantity">Quantity <input class="qty" type="number" value="1" name="quantity"></div>
-                                            <button type="button" class="theme-btn add-to-cart"><span class="btn-title">Add To Cart</span></button>
+                                            <div class="item-quantity">Số lượng <input class="qty" type="number" value="1" name="quantity" id="product_quantity"></div>
+                                            <button type="button" class="theme-btn add-to-cart" id="buttonAddToCart"><span class="btn-title">Add To Cart</span></button>
                                             <ul class="product-meta">
-                                                <li class="posted_in">Category: <a href="#">Cake</a></li>
-                                                <li class="tagged_as">Tag: <a href="#">Nuts</a></li>
+                                                <li class="posted_in" >Loại sản phẩm: <a href="#" id="nameCategories">Cake</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -428,12 +427,12 @@
                             <!--End Product Info Tabs-->
                             
                             <!-- Related Products -->
-                            <div class="related-products">
+                            <div class="related-products" >
                                 <div class="sec-title">
                                     <h2>Related products</h2>
                                 </div>
 
-                                <div class="row clearfix">
+                                <div class="row clearfix" id="div-have-product-relative">
                                     <!-- Shop Item --> 
                                     <div class="shop-item col-lg-4 col-md-6 col-sm-12">
                                         <div class="inner-box">
@@ -700,6 +699,10 @@
 <script src="js/select2.min.js"></script>
 <script src="js/sticky_sidebar.min.js"></script>
 <script src="js/script.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+<script src="js/api/show-cart.js"></script>
+<script src="js/api/cart.js"></script>
+<script src="js/api/product-detail.js"></script>
 </body>
 
 <!-- Mirrored from html.cwsthemes.com/bellaria/shop-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jun 2021 10:27:29 GMT -->
