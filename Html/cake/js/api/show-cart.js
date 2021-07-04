@@ -30,6 +30,11 @@ $('#update-in-cart').click(function() {
     // JSON.parse(localStorage.setItem('cart'));
     localStorage.setItem('cart', JSON.stringify(list_item_update));
     toastr.success("Cập nhật giỏ hàng thành công");
+    window.setTimeout(function(){
+        // Move to a new location or you can do something else
+        location.reload();
+
+    }, 2000)
 });
 function deleteProductInCart(id,element){
     // Xóa đi row chứa phần tử này
@@ -131,13 +136,22 @@ function order()
                       // });
                       // console.log(JSON.stringify(model))  
                       localStorage.clear()
+                      toastr.success('Mua thành công');
+                      window.setTimeout(function(){
+                        // Move to a new location or you can do something else
                         window.location.href="http://desktop-lgb0cv5:5500/cake/index-7.html";
+                    }, 2000)
                     },
                     error : function (e){      
                         console.log(e)
                         if(e.status == 200){
                           localStorage.clear()
-                          window.location.href="http://desktop-lgb0cv5:5500/cake/index-7.html";
+                          toastr.success('Mua thành công');
+                          window.setTimeout(function(){
+                            // Move to a new location or you can do something else
+                            window.location.href="http://desktop-lgb0cv5:5500/cake/index-7.html";
+                        }, 2000)
+                          
                         }
                         else{
 

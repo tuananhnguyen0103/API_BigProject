@@ -1,34 +1,31 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from www.multipurposethemes.com/admin/eduadmin-template/bs5/main/tables_data.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 May 2021 08:12:59 GMT -->
+  
+<!-- Mirrored from www.multipurposethemes.com/admin/eduadmin-template/bs5/main/index6.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 May 2021 08:12:20 GMT -->
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="https://www.multipurposethemes.com/admin/eduadmin-template/bs5/images/favicon.ico">
-	
-    <title>Danh sách chi tiết đơn hàng</title>
-  
+
+    <title>EduAdmin - Dashboard</title>
+    
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="css/vendors_css.css">
-	  
+	<link rel="stylesheet" href="css/statistic.css">
 	<!-- Style-->  
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/skin_color.css">
-	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
-	<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
- 
-
-</head>
+     
+  </head>
 
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed">
 	
 <div class="wrapper">
-	<div id="loader"></div>
-
+  <div id="loader"></div>
+	
   <header class="main-header">
 	<div class="d-flex align-items-center logo-box justify-content-start">
 		<a href="#" class="waves-effect waves-light nav-link d-none d-md-inline-block mx-10 push-btn bg-transparent" data-toggle="push-menu" role="button">
@@ -186,7 +183,6 @@
     </nav>
   </header>
   
-  <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar-->
     <section class="sidebar position-relative">	
@@ -259,196 +255,74 @@
 		<a href="javascript:void(0)" class="link" data-bs-toggle="tooltip" title="Logout"><span class="icon-Lock-overturning"><span class="path1"></span><span class="path2"></span></span></a>
 	</div>
   </aside>
-  
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
 	  <div class="container-full">
-		<!-- Content Header (Page header) -->
-		<div class="content-header">
-			<div class="d-flex align-items-center">
-				<div class="me-auto">
-					<h3 class="page-title">Data Tables</h3>
-					<div class="d-inline-block align-items-center">
-						<nav>
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
-								<li class="breadcrumb-item" aria-current="page">Tables</li>
-								<li class="breadcrumb-item active" aria-current="page">Data Tables</li>
-							</ol>
-						</nav>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-
 		<!-- Main content -->
 		<section class="content">
-		  <div class="row">
-			  
-			<div class="col-12">
-				<div class="box">
-					
-					<div class="box-header" style="display: flex; justify-content: space-between;">						
-						<h4 class="box-title">Danh sách chi tiết đơn hàng</h4>
-						<div>
-							<label for="cars">Thêm sản phẩm:</label>
-
-							<select id="cars">
-								<option value="volvo">Volvo</option>
-								<option value="saab">Saab</option>
-								<option value="opel">Opel</option>
-								<option value="audi">Audi</option>
-							</select>
-						</div>
-					</div>
-					<div class="box-body">
-						<div class="table-responsive">
-							<table id="example" class="display" style="width:100%">
-								<thead>
-									<tr>
-										<th>STT</th>
-										<th>Tên</th>
-										<th>Giá</th>
-										<th>Số lượng</th>
-										<th>Tổng tiền</th>
-										<th>Chức năng</th>
-									</tr>
-								</thead>
-								<tbody id="have-all-bill">
-									<!-- <tr>
-										<td>44</td>
-										<td>System Architect</td>
-										<td>Edinburgh</td>
-										<td>61</td>
-										<td>$320,800</td>
-										<td></td>
-									</tr> -->
-									
-								</tbody>
-								<tfoot>
-									<tr>
-										<th>STT</th>
-										<th>Tên</th>
-										<th>Giá</th>
-										<th>Số lượng</th>
-										<th>Tổng tiền</th>
-										<th>Chức năng</th>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-					</div>
-					<div class="box-header" style="display: flex; justify-content: space-between;">						
-						<h4 class="box-title"></h4>
-						<div>
-							<!-- <h5> <a href="">Cập nhật đơn hàng</a> </h5> -->
-							<h5 class="btn btn-primary" href="#" id="bill_totals" role="button"></h5>
-						</div>
-					</div>
-					<div class="form-body" style="border: 1.5rem solid #FFFFFF;">
-						<h4 class="box-title">Thông tin đơn hàng</h4>
-						<div class="row">
-							
-							<!--/span-->
-							<div class="col-md-6">
-								<div class="form-group">
-									<label for="bill_state">Tình trạng đơn hàng:</label>
-
-									<select id="bill_state">
-										<option value="Chưa thanh toán">Chưa thanh toán</option>
-										<option value="Đã xác thực">Đã xác thực</option>
-										<option value="Đang vận chuyển ">Đang vận chuyển</option>
-										<option value="Đã hoàn thành">Đã hoàn thành</option>
-										<option value="Hủy">Hủy</option>
-									</select>
-								</div>
-							</div>
-							<!--/span-->
-							<div class="col-md-6">
-								
-							</div>
-							<!--/span-->
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label class="fw-700 fs-16 form-label">Miêu tả</label>
-									<input type="text" class="form-control" placeholder="Customer Name" id="bill_des">
-								</div>
-							</div>
-							<!--/span-->
-							<div class="col-md-6">
-								<div class="form-group">
-									<label class="fw-700 fs-16 form-label">Ngày mua</label>
-								  	<input type="text" class="form-control" placeholder="Ngày mua" id="bill_date" disabled>
-								</div>
-							</div>
-							
-							<!--/span-->
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label class="fw-700 fs-16 form-label">Tên khách hàng</label>
-									<input type="text" class="form-control" placeholder="Customer Name" id="customer_name">
-								</div>
-							</div>
-							<!--/span-->
-							<div class="col-md-6">
-								<div class="form-group">
-									<label class="fw-700 fs-16 form-label">Email</label>
-								  	<input type="text" class="form-control" placeholder="Customer Email" id="customer_email">
-								</div>
-							</div>
-							
-							<!--/span-->
-						</div>
-						<!--/row-->
-						<!--/row-->
-						<div class="row">
-							
-							<!--/span-->
-							<div class="col-md-6">
-								<div class="form-group">
-									<label class="fw-700 fs-16 form-label">Số điện thoại</label>
-									<input type="text" class="form-control" placeholder="Customer Phone" id="customer_phone">
-								</div>
-							</div>
-							<!--/span-->
-							<div class="col-md-6">
-								<div class="form-group">
-									<label class="fw-700 fs-16 form-label">Địa chỉ</label>
-								  	<input type="text" class="form-control" placeholder="Customer Address" id="customer_address">
-								</div>
-							</div>
-							<!--/span-->
+			<div class="row">
+				<div class="col-xl-4 col-12">
+					<div class="box">
+						<div class="box-header with-border" style="display: flex;justify-content: space-between;">
+							<h5 class="box-title">Doanh số</h5>
+							<h5 class="box-title" style="color: rgb(22, 61, 235);" id="amount_total">Doanh số</h5>
 						</div>
 						
-						<!--/row-->
-					</div>
-					<div class="box-header" style="display: flex; justify-content: space-between;">						
-						<h4 class="box-title"></h4>
-						<div>
-							<!-- <h5> <a href="">Cập nhật đơn hàng</a> </h5> -->
-							<a class="btn btn-primary" href="#" id="update-bill-details" role="button">Cập nhật đơn hàng</a>
-						</div>
 					</div>
 				</div>
+				<div class="col-xl-4 col-12">
+					<div class="box">
+						<div class="box-header with-border" style="display: flex;justify-content: space-between;">
+							<h5 class="box-title">Tổng sản phẩm</h5>
+							<h5 class="box-title" style="color: rgb(22, 61, 235);" id="amount_product">Tổng sản phẩm</h5>
+						</div>
+						
+					</div>
+				</div><div class="col-xl-4 col-12">
+					<div class="box">
+						<div class="box-header with-border" style="display: flex;justify-content: space-between;">
+							<h5 class="box-title">Tổng đơn hàng</h5>
+							<h5 class="box-title" style="color: rgb(22, 61, 235);" id="amount_bill">Tổng đơn hàng</h5>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-12" >
+					<select name="TenDanhSach" id="month-for-budget">
+						<option value="1">Tháng 1</option>
+						<option value="2">Tháng 2</option>
+						<option value="3">Tháng 3</option>
+						<option value="4">Tháng 4</option>
+						<option value="5">Tháng 5</option>
+						<option value="6">Tháng 6</option>
+						<option value="7">Tháng 7</option>
+						<option value="8">Tháng 8</option>
+						<option value="9">Tháng 9</option>
+						<option value="10">Tháng 10</option>
+						<option value="11">Tháng 11</option>
+						<option value="12">Tháng 12</option>
+					</select>
+				</div>
+				<div class="col-lg-3 col-md-6 col-12" ></div>
+				<div class="col-lg-3 col-md-6 col-12" ></div>
+				<div class="col-lg-3 col-md-6 col-12" ></div>
+				<div class="col-12">
+					<figure class="highcharts-figure">
+						<div id="container"></div>
+						
+					  </figure>
+				</div>
+				
+				
 			</div>
-
-			
-			<!-- /.col -->
-		  </div>
-		  <!-- /.row -->
+					
 		</section>
 		<!-- /.content -->
-	  
 	  </div>
   </div>
   <!-- /.content-wrapper -->
-  
-   <footer class="main-footer">
+  <footer class="main-footer">
     <div class="pull-right d-none d-sm-inline-block">
         <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
 		  <li class="nav-item">
@@ -461,6 +335,7 @@
     </div>
 	  &copy; 2021 <a href="https://www.multipurposethemes.com/">Multipurpose Themes</a>. All Rights Reserved.
   </footer>
+
   <!-- Control Sidebar -->
   <aside class="control-sidebar">
 	  
@@ -727,156 +602,32 @@
   
   <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
+  
 </div>
 <!-- ./wrapper -->
 	
-	<!-- ./side demo panel -->
 	
-	<!-- Sidebar -->
-	
-	<div id="chat-box-body">
-		
-
-		<div class="chat-box">
-            <div class="chat-box-header p-15 d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button class="waves-effect waves-circle btn btn-circle btn-primary-light h-40 w-40 rounded-circle l-h-45" type="button" data-bs-toggle="dropdown">
-                      <span class="icon-Add-user fs-22"><span class="path1"></span><span class="path2"></span></span>
-                  </button>
-                  <div class="dropdown-menu min-w-200">
-                    <a class="dropdown-item fs-16" href="#">
-                        <span class="icon-Color me-15"></span>
-                        New Group</a>
-                    <a class="dropdown-item fs-16" href="#">
-                        <span class="icon-Clipboard me-15"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
-                        Contacts</a>
-                    <a class="dropdown-item fs-16" href="#">
-                        <span class="icon-Group me-15"><span class="path1"></span><span class="path2"></span></span>
-                        Groups</a>
-                    <a class="dropdown-item fs-16" href="#">
-                        <span class="icon-Active-call me-15"><span class="path1"></span><span class="path2"></span></span>
-                        Calls</a>
-                    <a class="dropdown-item fs-16" href="#">
-                        <span class="icon-Settings1 me-15"><span class="path1"></span><span class="path2"></span></span>
-                        Settings</a>
-                    <div class="dropdown-divider"></div>
-					<a class="dropdown-item fs-16" href="#">
-                        <span class="icon-Question-circle me-15"><span class="path1"></span><span class="path2"></span></span>
-                        Help</a>
-					<a class="dropdown-item fs-16" href="#">
-                        <span class="icon-Notifications me-15"><span class="path1"></span><span class="path2"></span></span> 
-                        Privacy</a>
-                  </div>
-                </div>
-                <div class="text-center flex-grow-1">
-                    <div class="text-dark fs-18">Mayra Sibley</div>
-                    <div>
-                        <span class="badge badge-sm badge-dot badge-primary"></span>
-                        <span class="text-muted fs-12">Active</span>
-                    </div>
-                </div>
-                <div class="chat-box-toggle">
-                    <a id="chat-box-toggle" class="waves-effect waves-circle btn btn-circle btn-danger-light h-40 w-40 rounded-circle l-h-45" href="#">
-                      <span class="icon-Close fs-22"><span class="path1"></span><span class="path2"></span></span>
-                    </a>                    
-                </div>
-            </div>
-            <div class="chat-box-body">
-                <div class="chat-box-overlay">   
-                </div>
-                <div class="chat-logs">
-                    <div class="chat-msg user">
-                        <div class="d-flex align-items-center">
-                            <span class="msg-avatar">
-                                <img src="../images/avatar/2.jpg" class="avatar avatar-lg">
-                            </span>
-                            <div class="mx-10">
-                                <a href="#" class="text-dark hover-primary fw-bold">Mayra Sibley</a>
-                                <p class="text-muted fs-12 mb-0">2 Hours</p>
-                            </div>
-                        </div>
-                        <div class="cm-msg-text">
-                            Hi there, I'm Jesse and you?
-                        </div>
-                    </div>
-                    <div class="chat-msg self">
-                        <div class="d-flex align-items-center justify-content-end">
-                            <div class="mx-10">
-                                <a href="#" class="text-dark hover-primary fw-bold">You</a>
-                                <p class="text-muted fs-12 mb-0">3 minutes</p>
-                            </div>
-                            <span class="msg-avatar">
-                                <img src="../images/avatar/3.jpg" class="avatar avatar-lg">
-                            </span>
-                        </div>
-                        <div class="cm-msg-text">
-                           My name is Anne Clarc.         
-                        </div>        
-                    </div>
-                    <div class="chat-msg user">
-                        <div class="d-flex align-items-center">
-                            <span class="msg-avatar">
-                                <img src="../images/avatar/2.jpg" class="avatar avatar-lg">
-                            </span>
-                            <div class="mx-10">
-                                <a href="#" class="text-dark hover-primary fw-bold">Mayra Sibley</a>
-                                <p class="text-muted fs-12 mb-0">40 seconds</p>
-                            </div>
-                        </div>
-                        <div class="cm-msg-text">
-                            Nice to meet you Anne.<br>How can i help you?
-                        </div>
-                    </div>
-                </div><!--chat-log -->
-            </div>
-            <div class="chat-input">      
-                <form>
-                    <input type="text" id="chat-input" placeholder="Send a message..." onchange="updateQuantityBillDetails()" />
-                    <button type="submit" class="chat-submit" id="chat-submit">
-                        <span class="icon-Send fs-22"></span>
-                    </button>
-                </form>      
-            </div>
-		</div>
-	</div>
 	
 	<!-- Page Content overlay -->
-	<script type="text/javascript">
-		$("#example").DataTable( {
-            "lengthMenu": [[5, 10, 50, -1], [5, 10, 50, "All"]],
-            "language": {
-                "lengthMenu": "Hiện _MENU_ dòng",
-                "zeroRecords": "Không tìm thấy kết quả",
-                "info": "Trang _PAGE_ trên _PAGES_",
-                "infoEmpty": "Không tìm thấy bản ghi hợp lệ",
-                "infoFiltered": "(Tổng số _MAX_ bản ghi )",
-                "Search":         "Tìm:",
-                "zeroRecords":    "No matching records found",
-                "paginate": {
-                    "first":      "Đầu",
-                    "last":       "Cuối",
-                    "next":       "Tiếp",
-                    "previous":   "Sau"
-                },
-            }
-        } );
-    </script>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/series-label.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="js/api/statistic.js"></script>
 	<!-- Vendor JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 	<script src="js/vendors.min.js"></script>
 	<script src="js/pages/chat-popup.js"></script>
     <script src="../assets/icons/feather-icons/feather.min.js"></script>	
-	<script src="../assets/vendor_components/datatable/datatables.min.js"></script>
+	
+	<script src="../assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
 	
 	<!-- EduAdmin App -->
 	<script src="js/template.js"></script>
+	<script src="js/pages/dashboard6.js"></script>
 	
-	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <script src="js/api/bill-details.js"></script>
-	
-
 </body>
 
-<!-- Mirrored from www.multipurposethemes.com/admin/eduadmin-template/bs5/main/tables_data.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 May 2021 08:13:00 GMT -->
+<!-- Mirrored from www.multipurposethemes.com/admin/eduadmin-template/bs5/main/index6.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 May 2021 08:12:22 GMT -->
 </html>

@@ -10,7 +10,7 @@
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link href="css/responsive.css" rel="stylesheet">
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
@@ -138,39 +138,11 @@
 
                     <div class="outer-box clearfix">
                         <!-- Shoppping Car -->
-                        <div class="cart-btn">
-                            <a href="shopping-cart.html"><i class="icon flaticon-commerce"></i> <span class="count">2</span></a>
-
-                            <div class="shopping-cart">
-                                <ul class="shopping-cart-items">
-                                    <li class="cart-item">
-                                        <img src="images/resource/products/prod-thumb-1.jpg" alt="#" class="thumb" />
-                                        <span class="item-name">Birthday Cake</span>
-                                        <span class="item-quantity">1 x <span class="item-amount">$84.00</span></span>
-                                        <a href="shop-single.html" class="product-detail"></a>
-                                        <button class="remove-item"><span class="fa fa-times"></span></button>
-                                    </li>
-
-                                    <li class="cart-item">
-                                        <img src="images/resource/products/prod-thumb-2.jpg" alt="#" class="thumb"  />
-                                        <span class="item-name">French Macaroon</span>
-                                        <span class="item-quantity">1 x <span class="item-amount">$13.00</span></span>
-                                        <a href="shop-single.html" class="product-detail"></a>
-                                        <button class="remove-item"><span class="fa fa-times"></span></button>
-                                    </li>
-                                </ul>
-
-                                <div class="cart-footer">
-                                    <div class="shopping-cart-total"><strong>Subtotal:</strong> $97.00</div>
-                                    <a href="cart.html" class="theme-btn">View Cart</a>
-                                    <a href="checkout.html" class="theme-btn">Checkout</a>
-                                </div>
-                            </div> <!--end shopping-cart -->
-                        </div>
-
+                        
                         <!-- Search Btn -->
-                        <div class="search-box">
-                            <button class="search-btn"><i class="fa fa-search"></i></button>
+                        <div class="search-box" style="display: flex;">
+                            <input id="search_product_input" class="form-control form-control" type="text" placeholder="Tìm sản phẩm">
+                            <a class="search-product-index-page" style="margin: 0.2rem 0.9rem 0.7rem -2rem;"><i class="fa fa-search fa-2x search-product-index-page"></i></a>
                         </div>
                     </div>
                 </div>
@@ -273,22 +245,13 @@
             <div class="row clearfix">
 
                 <!--Content Side-->
-                <div class="content-side col-lg-9 col-md-12 col-sm-12">
+                <div class="content-side col-lg-12 col-md-12 col-sm-12">
                     <div class="our-shop">
                         <div class="shop-upper-box clearfix">
-                            <div class="items-label">Showing all 12 results</div>
-                            <div class="orderby">
-                                <select name="orderby" class="sortby-select select2-offscreen">
-                                    <option value="popularity">Sort by popularity</option>
-                                    <option value="rating" >Sort by average rating</option>
-                                    <option value="date" >Sort by newness</option>
-                                    <option value="price" >Sort by price: low to high</option>
-                                    <option value="price-desc" >Sort by price: high to low</option>
-                                </select>
-                            </div>
+                            
                         </div>
 
-                        <div class="row clearfix">
+                        <div class="row clearfix" id ="div-have-product-index">
                             
                             <!-- Shop Item --> 
                             <div class="shop-item col-lg-4 col-md-6 col-sm-12">
@@ -477,89 +440,7 @@
                 </div>
                 
                 <!--Sidebar Side-->
-                <div class="sidebar-side sticky-container col-lg-3 col-md-12 col-sm-12">
-                    <aside class="sidebar theiaStickySidebar">
-                        <div class="sticky-sidebar">
-                            <!-- Search Widget -->
-                            <div class="sidebar-widget search-widget">
-                                <form method="post" action="http://html.cwsthemes.com/bellaria/contact.html">
-                                    <div class="form-group">
-                                        <input type="search" name="search-field" value="" placeholder="Search products…" required>
-                                        <button type="submit"><span class="icon fa fa-search"></span></button>
-                                    </div>
-                                </form>
-                            </div>
-                            
-                            <!-- Cart Widget -->
-                            <div class="sidebar-widget cart-widget">
-                                <div class="widget-content">
-                                    <h3 class="widget-title">Cart</h3>
-                                    
-                                    <div class="shopping-cart">
-                                        <ul class="shopping-cart-items">
-                                            <li class="cart-item">
-                                                <img src="images/resource/products/prod-thumb-1.jpg" alt="#" class="thumb" />
-                                                <span class="item-name">Birthday Cake</span>
-                                                <span class="item-quantity">1 x <span class="item-amount">$84.00</span></span>
-                                                <a href="shop-single.html" class="product-detail"></a>
-                                                <button class="remove-item"><span class="fa fa-times"></span></button>
-                                            </li>
-
-                                            <li class="cart-item">
-                                                <img src="images/resource/products/prod-thumb-2.jpg" alt="#" class="thumb"  />
-                                                <span class="item-name">French Macaroon</span>
-                                                <span class="item-quantity">1 x <span class="item-amount">$13.00</span></span>
-                                                <a href="shop-single.html" class="product-detail"></a>
-                                                <button class="remove-item"><span class="fa fa-times"></span></button>
-                                            </li>
-                                        </ul>
-
-                                        <div class="cart-footer">
-                                            <div class="shopping-cart-total"><strong>Subtotal:</strong> $97.00</div>
-                                            <a href="cart.html" class="theme-btn">View Cart</a>
-                                            <a href="checkout.html" class="theme-btn">Checkout</a>
-                                        </div>
-                                    </div> <!--end shopping-cart -->
-                                </div>
-                            </div>
-
-                            <!-- Range Slider Widget -->
-                            <div class="sidebar-widget rangeslider-widget">
-                                <div class="widget-content">
-                                    <h3 class="widget-title">Price Filter</h3>
-                                    
-                                    <div class="range-slider-one clearfix">
-                                        <div class="price-range-slider"></div>
-                                        <div class="clearfix">
-                                            <div class="pull-left input-box">
-                                                <div class="title">Price:</div>
-                                                <div class="input"><input type="text" class="property-amount" name="field-name" readonly></div>
-                                            </div>
-                                            <div class="pull-right btn-box">
-                                                <a href="#" class="theme-btn"><span class="btn-title">Filtter</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Tags Widget -->
-                            <div class="sidebar-widget tags-widget">
-                                <h3 class="widget-title">Tags</h3>
-                                <ul class="tag-list clearfix">
-                                    <li><a href="#">Bars</a></li>
-                                    <li><a href="#">Caramels</a></li>
-                                    <li><a href="#">Chocolate</a></li>
-                                    <li><a href="#">Fruit</a></li>
-                                    <li><a href="#">Nuts</a></li>
-                                    <li><a href="#">Toffees</a></li>
-                                    <li><a href="#">Top Rated</a></li>
-                                    <li><a href="#">Truffles</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </aside>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -699,7 +580,7 @@
     </svg>
     <span class="fa fa-angle-up"></span>
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 <script src="js/jquery.js"></script> 
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -711,6 +592,8 @@
 <script src="js/select2.min.js"></script>
 <script src="js/sticky_sidebar.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/api/cart-define.js"></script>
+<script src="js/api/allproduct.js"></script>
 </body>
 
 <!-- Mirrored from html.cwsthemes.com/bellaria/shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jun 2021 10:04:49 GMT -->

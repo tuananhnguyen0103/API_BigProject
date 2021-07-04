@@ -20,6 +20,10 @@ namespace BLL
         {
             return _res.GetBills();
         }
+        public List<Bill>  GetBillsStateDone()
+        {
+            return _res.GetBillsStateDone();
+        }
         public Bill GetBillById(int idBill)
         {
             return _res.GetBillById(idBill);
@@ -31,6 +35,10 @@ namespace BLL
         public bool UpdateBillWhenUpdate(Bill bill,int idBill)
         {
             return _res.UpdateBillWhenUpdate(bill, idBill);
+        }
+        public List<Bill> GetBillsByMonth(int month)
+        {
+            return _res.GetBillsByMonth(month);
         }
     }
 }

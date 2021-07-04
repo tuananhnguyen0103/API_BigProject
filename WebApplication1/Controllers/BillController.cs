@@ -34,11 +34,23 @@ namespace AlcoholAPI_BTL.Controllers
         {
             return _IBillBUS.GetBills();
         }
+        [Route("get-item-done")]
+        [HttpGet]
+        public IEnumerable<Bill> GetDatabAllDone()
+        {
+            return _IBillBUS.GetBillsStateDone();
+        }
         [Route("get-item/{idBill}")]
         [HttpGet]
         public Bill GetBillById(int idBill)
         {
             return _IBillBUS.GetBillById(idBill);
+        }
+        [Route("get-item-by-month/{month}")]
+        [HttpGet]
+        public IEnumerable<Bill> GetBillsByMonth(int month)
+        {
+            return _IBillBUS.GetBillsByMonth(month);
         }
         [Route("create-item")]
         [HttpPost]
