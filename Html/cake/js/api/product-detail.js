@@ -6,8 +6,6 @@ $.ajax({
     method : 'get',
     url: 'https://localhost:44352/api/product/get-item/'+id,
     success: function(results){
-
-
         console.log(results)
         $('#product_name').html(results.name);
         $('#product_price').html(results.price);
@@ -55,26 +53,27 @@ $.ajax({
             }
         })
         // document.getElementById("get-list-categories").value = results.idCategories;
-        $('#buttonAddToCart').click(function(){
-            item= {
-                id: parseInt(id),
-                price:parseInt($('#product_price').html()),
-                quantity:parseInt($('#product_quantity').val()),
-                name:$('#product_name').html(),
-                image:$('#product_image').attr("src"),
+        // $('#buttonAddToCart').click(function(){
+        //     item= {
+        //         id: parseInt(id),
+        //         price:parseInt($('#product_price').html()),
+        //         quantity:parseInt($('#product_quantity').val()),
+        //         name:$('#product_name').html(),
+        //         image:$('#product_image').attr("src"),
+        //         show: 1, 
                 
-            }
-            cart_items.push(item);
+        //     }
+        //     // cart_items.push(item);
             
-            console.log(item)
+        //     console.log(item)
             
-            Cart.addItem(item)
+        //     // Cart.addItem(item)
             
 
 
             
-            // window.addEventListener('storage', window.addEventListener('storage', document.location.reload()))
-        })
+        //     // window.addEventListener('storage', window.addEventListener('storage', document.location.reload()))
+        // })
         var a = (results.price)
         
         // $('#product_price').inputNumberFormat({ 'decimal': 0 });
@@ -84,5 +83,5 @@ $.ajax({
     }
     
 })  
-Cart.initJQuery();
+// Cart.initJQuery();
 

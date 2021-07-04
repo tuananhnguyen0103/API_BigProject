@@ -13,6 +13,9 @@ namespace Model
         public int BillTotal { get; set; }
         public string BillDescription { get; set; }
         public string BillDateBuy { get; set; }
+        public string CustomerAddress { get; set; }
+        public string CustomerName { get; set; }
+
         public string BillState { get; set; }
     }
 }

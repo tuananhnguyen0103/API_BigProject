@@ -28,6 +28,12 @@ namespace AlcoholAPI_BTL.Controllers
         {
             return _IBillDetailsBUS.GetBillDetails();
         }
+        [Route("get-item/{idBill}")]
+        [HttpGet]
+        public IEnumerable<BillDetails> GetBillDetailsById (int IdBill)
+        {
+            return _IBillDetailsBUS.GetBillDetailsById(IdBill);
+        }
         [Route("create-item")]
         [HttpPost]
         public string CreateBillDetails([FromBody] List<BillDetails> billDetails)
@@ -40,6 +46,35 @@ namespace AlcoholAPI_BTL.Controllers
                 }
             }
            
+            return "Thêm thành công";
+        }
+        [Route("delete-bill-details-when-update/{idBill}")]
+        [HttpGet]
+        public string DeleteBillDetailsWhenUpdate(int IdBill)
+        {
+            if (IdBill != null)
+            {
+                _IBillDetailsBUS.DeleteBillDetailsWhenUpdate(IdBill);
+            }
+
+            return "Xóa thành công";
+        }
+        [Route("create-item-when-update")]
+        [HttpPost]
+        public string CreateBillDetailsWhenUpdate([FromBody] List<BillDetails> billDetails)
+        {
+            var idBill = 0;
+            var billTotal = 0;
+            if (billDetails != null)
+            {
+                foreach (var item in billDetails)
+                {
+                    _IBillDetailsBUS.CreateBillDetailsWhenUpdate(item);
+                    billTotal += item.Total;
+                    idBill = item.IdBill;
+                }
+            }
+            
             return "Thêm thành công";
         }
     }

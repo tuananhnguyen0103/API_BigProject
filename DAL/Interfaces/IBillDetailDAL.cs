@@ -9,5 +9,9 @@ namespace DAL.Interfaces
     {
         List<BillDetails> GetBillDetails();
         bool CreateBillDetails(BillDetails billDetails);
+        List<BillDetails> GetBillDetailsById(int IdBill);
+        bool DeleteBillDetailsWhenUpdate(int idBill);
+        bool CreateBillDetailsWhenUpdate(BillDetails billDetails);
+        
     }
 }

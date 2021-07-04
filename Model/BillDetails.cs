@@ -11,5 +11,8 @@ namespace Model
         public int Quantity { get; set; }
         public int Total { get; set; }
         public int IdBill { get; set; }
+        public string Name { get; set; }
+        public int Price { get; set; }
+        public string Image { get; set; }
     }
 }

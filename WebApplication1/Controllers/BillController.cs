@@ -34,6 +34,12 @@ namespace AlcoholAPI_BTL.Controllers
         {
             return _IBillBUS.GetBills();
         }
+        [Route("get-item/{idBill}")]
+        [HttpGet]
+        public Bill GetBillById(int idBill)
+        {
+            return _IBillBUS.GetBillById(idBill);
+        }
         [Route("create-item")]
         [HttpPost]
         public Bill CreateBill([FromForm] Bill bill)
@@ -43,6 +49,25 @@ namespace AlcoholAPI_BTL.Controllers
             string DateBuy = String.Format("{0:yyyy'-'MM'-'dd' 'HH':'mm':'ss'.'fff}", dateTime_Eastern);
             _IBillBUS.CreateBill(bill, DateBuy);
             return bill;
+        }
+        [Route("update-item/{idBill}")]
+        [HttpPost]
+        public string UpdateBillWhenUpdate(Bill bill, int idBill)
+        {
+            //var idBill = 0;
+            //var billTotal = 0;
+            if (bill != null)
+            {
+                //foreach (var item in billDetails)
+                //{
+                //    _IBillDetailsBUS.CreateBillDetailsWhenUpdate(item);
+                //    billTotal += item.Total;
+                //    idBill = item.IdBill;
+                //}
+                _IBillBUS.UpdateBillWhenUpdate(bill, idBill);
+            }
+
+            return "Thêm thành công";
         }
     }
 }

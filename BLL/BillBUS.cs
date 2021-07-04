@@ -20,9 +20,17 @@ namespace BLL
         {
             return _res.GetBills();
         }
+        public Bill GetBillById(int idBill)
+        {
+            return _res.GetBillById(idBill);
+        }
         public bool CreateBill(Bill bill, string DateBuy)
         {
             return _res.CreateBill(bill, DateBuy);
+        }
+        public bool UpdateBillWhenUpdate(Bill bill,int idBill)
+        {
+            return _res.UpdateBillWhenUpdate(bill, idBill);
         }
     }
 }

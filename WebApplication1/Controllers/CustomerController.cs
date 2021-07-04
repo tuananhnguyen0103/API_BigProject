@@ -33,11 +33,24 @@ namespace AlcoholAPI_BTL.Controllers
         {
             return _ICustomerBUS.GetCustomers();
         }
+        [Route("get-item/{idBill}")]
+        [HttpGet]
+        public Customers GetInfoCustomerById(int IdBill)
+        {
+            return _ICustomerBUS.GetInfoCustomerById(IdBill);
+        }
         [Route("create-item")]
         [HttpPost]
         public Customers CreateCustomer([FromForm] Customers customers)
         {
             _ICustomerBUS.CreateCustomer(customers);
+            return customers;
+        }
+        [Route("update-item/{IdBill}")]
+        [HttpPost]
+        public Customers UpdateCustomerById(Customers customers, int IdBill)
+        {
+            _ICustomerBUS.UpdateCustomerById(customers, IdBill);
             return customers;
         }
     }

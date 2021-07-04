@@ -23,5 +23,13 @@ namespace BLL
         {
             return _res.CreateCustomer(customers);
         }
+        public Customers GetInfoCustomerById(int IdBill)
+        {
+            return _res.GetInfoCustomerById(IdBill);
+        }
+        public bool UpdateCustomerById(Customers customers, int IdBill)
+        {
+            return _res.UpdateCustomerById(customers, IdBill);
+        }
     }
 }

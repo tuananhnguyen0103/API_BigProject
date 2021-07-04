@@ -10,5 +10,7 @@ namespace BLL.Interfaces
     {
         List<Bill> GetBills();
         bool CreateBill(Bill bill, string DateBuy);
+        Bill GetBillById(int idBill);
+        bool UpdateBillWhenUpdate(Bill bill,int idBill);
     }
 }

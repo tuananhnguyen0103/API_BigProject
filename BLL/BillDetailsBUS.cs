@@ -24,5 +24,18 @@ namespace BLL
         {
             return _res.CreateBillDetails(billDetails);
         }
+        public List<BillDetails> GetBillDetailsById(int IdBill)
+        {
+            return _res.GetBillDetailsById(IdBill);
+        }
+        public bool DeleteBillDetailsWhenUpdate(int idBill)
+        {
+            return _res.DeleteBillDetailsWhenUpdate(idBill);
+        }
+        public bool CreateBillDetailsWhenUpdate(BillDetails billDetails)
+        {
+            return _res.CreateBillDetailsWhenUpdate(billDetails);
+        }
+        
     }
 }

@@ -66,7 +66,7 @@
                     <nav class="main-menu navbar-expand-md navbar-light">
                         <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
                             <ul class="navigation menu-left clearfix">
-                                <li class="dropdown"><a href="index.html">Home</a>
+                                <li class="dropdown"><a href="index-7.html">Home</a>
                                     <ul>
                                         <li><a href="index.html">Cakes</a></li>
                                         <li><a href="index-2.html">Lollipop</a></li>
@@ -284,7 +284,7 @@
                                 <th class="product-remove">&nbsp;</th>
                             </tr>
                         </thead>
-                        <tbody class="cart-line-items">
+                        <tbody class="cart-line-items" id="show-cart-in-local">
                             
                         </tbody>
                     </table>
@@ -303,7 +303,7 @@
                     </div>
 
                     <div class="pull-right">
-                        <button type="button" class="theme-btn cart-btn">update cart</button>
+                        <button type="button" id="update-in-cart" class="theme-btn cart-btn ">Cập nhật giỏ hàng</button>
                     </div>
                 </div>
             </div>
@@ -341,14 +341,14 @@
                             </div>
                         </div>
                         <div class="lower-box">
-                            <button type="submit" onclick="Cart.checkout()">Place Order</button>
+                            <button type="button" class="btn btn-success" onclick="order()">Đặt hàng</button>
                         </div>
                     </form>                  
                     <div class="column  col-md-6">
                         <!--Totals Table-->
                         <ul class="totals-table">
-                            <li><h3>Cart Totals</h3></li>
-                            <li class="clearfix"><span class="col">Total</span><span class="col total-price cart-subtotal_l">$186.00</span></li>
+                            <li><h3>Tổng giỏ hàng</h3></li>
+                            <li class="clearfix"><span class="col">Tổng</span><span class="col total-price cart-subtotal_l" id="total-in-cart">$186.00</span></li>
                         </ul>
                     </div>  
                 </div>
@@ -480,7 +480,7 @@
 <script src="js/sticky_sidebar.min.js"></script>
 <script src="js/script.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-<script src="js/api/cart.js"></script>
+<!-- <script src="js/api/cart-define.js"></script> -->
 <script src="js/api/show-cart.js"></script>
 </body>
 
